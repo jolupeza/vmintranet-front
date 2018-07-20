@@ -1,0 +1,128 @@
+body {
+  // background-color: $bodyBg;
+  // color: $textColor;
+  font-family: $openSans;
+  font-size: 16px;
+}
+a {
+  color: $secondColor;
+  font-weight: 700;
+  transition: color .3s ease-out, background-color .2s ease-in-out;
+  &.hover, &:focus, &:hover {
+    color: $thirdColor;
+    text-decoration: none;
+  }
+}
+blockquote {
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.5;
+  p {
+    font-size: 1em;
+  }
+  &::before, &::after {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  &::before {
+    content: "\e911";
+    margin-right: .5em;
+  }
+  &::after {
+    content: "\e910";
+    margin-left: .5em;
+  }
+}
+p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.5;
+  @media screen and (max-width: 1200px) {
+    font-size: 1em;
+  }
+  &.small {
+    font-size: 1em;
+  }
+  &.smaller {
+    font-size: .875rem;
+  }
+}
+li {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.small {
+  font-size: 1rem;
+}
+.smaller {
+  font-size: .875rem;
+}
+.firstColor {
+  color: $firstColor;
+}
+.secondColor {
+  color: $secondColor;
+}
+.thirdColor {
+  color: $thirdColor;
+}
+.accentColor {
+  color: $accentColor;
+}
+.darkColor {
+  color: $darkColor;
+}
+.textColor {
+  color: $textColor;
+}
+.whiteColor {
+  color: white;
+}
+.grayDarkColor {
+  color: $grayDarkColor;
+}
+.firstColorBg {
+  background-color: $firstColor;
+}
+.secondColorBg {
+  background-color: $secondColor;
+}
+.thirdColorBg {
+  background-color: $thirdColor;
+}
+.accentColorBg {
+  background-color: $accentColor;
+}
+.darkColorBg {
+  background-color: $darkColor;
+}
+.textColorBg {
+  background-color: $textColor;
+}
+.ArrowTop {
+  background-color: $secondColor;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(black, .5);
+  cursor: pointer;
+  bottom: 25px;
+  color: white;
+  display: none;
+  font-size: 2rem;
+  padding: 0 .5rem;
+  position: fixed;
+  right: 25px;
+  transition: background-color .3s ease-out;
+  &:focus, &:hover {
+    background-color: $thirdColor;
+  }
+}

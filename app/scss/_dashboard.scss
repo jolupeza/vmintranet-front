@@ -1,0 +1,32 @@
+.Dashboard {
+
+}
+.Dashboard__figure {
+  margin-bottom: 0;
+  position: relative;
+}
+.Dashboard__info {
+  align-content: center;
+  background-color: rgba($firstColor, .7);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 2rem;
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+.Dashboard__info__title, .Dashboard__info__text {
+  width: 100%;
+}
+.Dashboard__info__title {
+  color: white;
+  font-family: $raleway;
+  font-size: 4rem;
+  font-weight: 500;
+  span {
+    display: block;
+    font-size: .66em;
+  }
+}

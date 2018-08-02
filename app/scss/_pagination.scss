@@ -1,0 +1,21 @@
+.Pagination {
+  .page-item {
+    padding-left: 1px;
+    &.active {
+      .page-link {
+        background-color: #fff;
+        border-color: #dee2e6;
+        color: $grayColor;
+        box-shadow: inset 0 1px 6px rgba(black, .5);
+      }
+    }
+  }
+  .page-link {
+    color: $grayColor;
+    font-size: .875rem;
+    padding: .75rem 1rem;
+    .material-icons {
+      font-size: 1em;
+    }
+  }
+}

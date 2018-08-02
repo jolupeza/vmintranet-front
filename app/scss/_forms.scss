@@ -1,4 +1,29 @@
+.Filters {
+  margin: 1.5rem 0;
+}
 .Form {
+  &--filters {
+    .form-control {
+      background-color: $secondColor;
+      color: white;
+      font-family: $openSans;
+      font-size: .875rem;
+      font-weight: 600;
+    }
+    select {
+      &.form-control {
+        option {
+          background-color: white;
+          color: $textColor;
+        }
+      }
+    }
+    input[type="date"] {
+      &:focus {
+        background-color: $secondColor;
+      }
+    }
+  }
 }
 .Form__group {
   position: relative;
@@ -66,9 +91,9 @@
     }
   }
 }
-select.Form__control:not([size]):not([multiple]) {
-  height: auto;
-}
+// select.Form__control:not([size]):not([multiple]) {
+//   height: auto;
+// }
 .Form__rotate {
   font-size: 1.5em;
   vertical-align: middle;

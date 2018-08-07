@@ -13506,6 +13506,9 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px; }
 
+p {
+  font-size: 1rem; }
+
 a {
   color: #348fce;
   font-weight: 700;

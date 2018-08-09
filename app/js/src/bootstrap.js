@@ -1,7 +1,5 @@
 "use strict";
 
-require('simplebar');
-
 window.Popper = require('popper.js').default;
 
 /**

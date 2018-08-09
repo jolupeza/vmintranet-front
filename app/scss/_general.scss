@@ -1,11 +1,36 @@
 body {
-  // background-color: $bodyBg;
-  // color: $textColor;
+  background-color: $bodyBg !important;
+  color: $textColor;
   font-family: $openSans;
   font-size: 16px;
 }
-p {
-  font-size: 1rem;
+.Body {
+  &--login {
+    height: 100vh;
+    padding-top: 10%;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  color: $titleColor;
+  font-weight: 300;
+}
+h1, .h1 {
+  font-size: 2.25rem;
+}
+h2, .h2 {
+  font-size: 1.875rem;
+}
+h3, .h3 {
+  font-size: 1.5rem;
+}
+h4, .h4 {
+  font-size: 1.125rem;
+}
+h5, .h5 {
+  font-size: .875rem;
+}
+h6, .h6 {
+  font-size: .75rem;
 }
 a {
   color: $secondColor;
@@ -16,57 +41,29 @@ a {
     text-decoration: none;
   }
 }
-blockquote {
-  font-size: 1.25em;
-  font-style: italic;
-  line-height: 1.5;
-  p {
-    font-size: 1em;
-  }
-  &::before, &::after {
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-size: 1.5em;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  &::before {
-    content: "\e911";
-    margin-right: .5em;
-  }
-  &::after {
-    content: "\e910";
-    margin-left: .5em;
-  }
-}
 p {
-  font-size: 1.125em;
+  font-size: .875rem;
   font-weight: 300;
   line-height: 1.5;
-  @media screen and (max-width: 1200px) {
-    font-size: 1em;
+  @media screen and (max-width: 991px) {
+    font-size: 1rem;
+  }
+  &.big {
+    font-size: 1rem;
   }
   &.small {
-    font-size: 1em;
-  }
-  &.smaller {
-    font-size: .875rem;
+    font-size: .75rem;
   }
 }
 li {
-  font-size: 1.125rem;
+  font-size: .875rem;
   font-weight: 300;
   line-height: 1.5;
 }
-.small {
+.big {
   font-size: 1rem;
 }
-.smaller {
+.small {
   font-size: .875rem;
 }
 .firstColor {
@@ -107,6 +104,14 @@ li {
 }
 .textColorBg {
   background-color: $textColor;
+}
+.column-seperation {
+  > div[class*="col-"] {
+    border-right: 1px solid #ddd;
+    &:last-child {
+      border-right: none;
+    }
+  }
 }
 .ArrowTop {
   background-color: $secondColor;

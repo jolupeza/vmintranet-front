@@ -7,48 +7,29 @@
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="error-body no-top">
+<body class="Body Body--login">
   <div class="container">
-    <div class="row login-container column-seperation justify-content-center">
+    <div class="row column-seperation justify-content-center">
       <div class="col-md-5">
-        <h2>Sign in to webarch</h2>
-        <p>Use Facebook, Twitter or your email to sign in.
-          <br>
-          <a href="#">Sign up Now!</a> for a webarch account,It's free and always will be..
-        </p>
-        <br>
-        <button class="btn btn-block btn-info col-md-8" type="button"><span class="pull-left icon-facebook" style="font-style: italic"></span> <span class="bold">Login with Facebook</span></button>
-        <button class="btn btn-block btn-success col-md-8" type="button"><span class="pull-left icon-twitter" style="font-style: italic"></span>
-          <span class="bold">Login with Twitter</span></button>
-      </div>
-      <div class="col-md-5">
-        <br>
-        <form action="index.html" class="login-form validate" id="login-form" method="post" name="login-form">
-          <div class="row">
-            <div class="form-group col-md-10">
-              <label class="form-label">Username</label>
-              <input class="form-control" id="txtusername" name="txtusername" type="email" required>
+        <h2 class="text-center">Sign in to webarch</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias neque cum ad, labore delectus consequatur exercitationem fuga, porro quibusdam, id expedita quaerat totam aperiam voluptatibus modi, illum illo eaque.</p>
+        <form action="index.html" class="Form Form--login" id="login-form" method="post" name="login-form">
+          <div class="form-group">
+            <label for="email" class="Form__label">Email</label>
+            <input class="form-control Form__control" id="email" name="email" type="email" required />
+          </div>
+          <div class="form-group">
+            <label for="password" class="Form__label">Password</label>
+            <input class="form-control Form__control" id="password" name="password" type="password" required>
+          </div>
+          <div class="control-group">
+            <div class="checkbox checkbox check-success">
+              <input id="checkbox1" type="checkbox" value="1" />
+              <label for="checkbox1">Recúerdame?</label>
             </div>
           </div>
-          <div class="row">
-            <div class="form-group col-md-10">
-              <label class="form-label">Password</label> <span class="help"></span>
-              <input class="form-control" id="txtpassword" name="txtpassword" type="password" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="control-group col-md-10">
-              <div class="checkbox checkbox check-success">
-                <a href="#">Trouble login in?</a>&nbsp;&nbsp;
-                <input id="checkbox1" type="checkbox" value="1">
-                <label for="checkbox1">Keep me reminded</label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10">
-              <button class="btn btn-primary btn-cons pull-right" type="submit">Login</button>
-            </div>
+          <div class="text-right">
+            <button class="btn btn-primary btn-cons" type="submit">Login</button>
           </div>
         </form>
       </div>

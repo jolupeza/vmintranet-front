@@ -137,23 +137,40 @@
             </ul>
           </li>
           <li>
-            <a href="javascript:;"> <i class="material-icons">flip</i><span class="title">Apoyo a las alumnas</span> <span class=" arrow"></span> </a>
+            <a href="javascript:;">
+              <i class="fa fa-robot"></i><span class="title">Apoyo a las alumnas</span><span class=" arrow"></span>
+            </a>
             <ul class="sub-menu">
-              <li> <a href="typography.html"> Typography </a> </li>
-              <li> <a href="messages_notifications.html"> Messages & Notifications </a> </li>
-              <li> <a href="notifications.html"> Notifications </a> </li>
-              <li> <a href="icons.html">Icons</a> </li>
-              <li class=""> <a href="buttons.html">Buttons</a> </li>
-              <li> <a href="tabs_accordian.html"> Tabs & Accordions </a> </li>
-              <li> <a href="sliders.html">Sliders</a> </li>
-              <li> <a href="group_list.html">Group list </a> </li>
+              <li><span class="title">Grados</span></li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">Primer Grado</span><span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li><a href="apoyo.html">Apoyo a las Alumnas</a></li>
+                  <li><a href="apoyo.html">Ejercicios Especiales</a></li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="javascript:;">
+                  <span class="title">Segundo Grado</span><span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                  <li><a href="apoyo.html">Apoyo a las Alumnas</a></li>
+                  <li><a href="apoyo.html">Ejercicios Especiales</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
           <li>
             <a href="javascript:;"><i class="fas fa-clipboard-check"></i><span class="title">Inst. de Evaluación</span><span class="arrow"></span> </a>
             <ul class="sub-menu">
-              <li> <a href="form_elements.html">Form Elements </a> </li>
-              <li> <a href="form_validations.html">Form Validations</a> </li>
+              <li><a href="instrumentos.html">Primer Grado</a></li>
+              <li><a href="instrumentos.html">Segundo Grado</a></li>
+              <li><a href="instrumentos.html">Tercer Grado</a></li>
+              <li><a href="instrumentos.html">Cuarto Grado</a></li>
+              <li><a href="instrumentos.html">Prekinder</a></li>
+              <li><a href="instrumentos.html">Kinder</a></li>
             </ul>
           </li>
           <li>
@@ -185,28 +202,44 @@
           <h3><i class="far fa-arrow-alt-circle-left"></i><span class="semi-bold">Circulares</span></h3>
         </div>
         <aside class="Filters">
-          <form action="" class="Form Form--filters form-inline justify-content-between">
-              <div>
-                <label class="sr-only" for="fromdate">Desde</label>
-                <input type="date" class="form-control" id="fromdate" name="fromdate" />
-
-                <label class="sr-only" for="todate">Hasta</label>
-                <input type="date" class="form-control" id="todate" name="todate" />
+          <form action="" class="Form Form--filters">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="input-group">
+                  <input type="date" class="form-control" id="fromdate" name="fromdate" />
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
+                  </div>
+                </div>
               </div>
-              <label class="sr-only" for="orderby">Ordenar por</label>
-              <select class="form-control" id="orderby" name="orderby">
-                <option value="">Ordenar por</option>
-                <option value="1">Más recientes</option>
-                <option value="2">Más antiguas</option>
-                <option value="3">Nombre</option>
-              </select>
+              <div class="col-md-2">
+                <div class="input-group">
+                  <input type="date" class="form-control" id="todate" name="todate" />
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="Select--custom">
+                  <select class="form-control" id="orderby" name="orderby">
+                    <option value="">Ordenar por</option>
+                    <option value="1">Más recientes</option>
+                    <option value="2">Más antiguas</option>
+                    <option value="3">Nombre</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button type="button" class="btn btn-primary btn-cons text-uppercase">Filtrar</button>
+              </div>
+            </div>
           </form>
         </aside>
         <div class="row">
           <div class="col-md-12">
             <div class="grid simple ">
               <div class="grid-title no-border">
-                <!-- <h4>Table  <span class="semi-bold">Styles</span></h4> -->
                 <div class="tools">
                   <a href="javascript:;" class="collapse"></a>
                   <a href="#grid-config" data-toggle="modal" class="config"></a>
@@ -215,16 +248,9 @@
                 </div>
               </div>
               <div class="grid-body no-border">
-                <!-- <h3>Basic  <span class="semi-bold">Table</span></h3> -->
                 <table class="table no-more-tables">
                   <thead>
                     <tr>
-                      <!-- <th style="width:1%">
-                        <div class="checkbox check-default">
-                          <input id="checkbox10" type="checkbox" value="1" class="checkall">
-                          <label for="checkbox10"></label>
-                        </div>
-                      </th> -->
                       <th style="width:9%">Fecha</th>
                       <th style="width:22%">Nombre del Archivo</th>
                       <th style="width:6%">Tamaño</th>
@@ -233,12 +259,6 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -249,12 +269,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -265,12 +279,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -281,12 +289,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -297,12 +299,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -313,12 +309,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -329,12 +319,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -345,12 +329,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -361,12 +339,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>
@@ -377,12 +349,6 @@
                       </td>
                     </tr>
                     <tr>
-                      <!-- <td class="v-align-middle">
-                        <div class="checkbox check-default">
-                          <input id="checkbox11" type="checkbox" value="1">
-                          <label for="checkbox11"></label>
-                        </div>
-                      </td> -->
                       <td class="v-align-middle">20 Ago</td>
                       <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
                       </td>

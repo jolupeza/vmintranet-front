@@ -4,18 +4,30 @@
 .Form {
   &--filters {
     .form-control {
-      background-color: $secondColor;
       color: white;
       font-family: $openSans;
-      font-size: .875rem;
+      font-size: 1rem;
       font-weight: 600;
     }
-    select {
-      &.form-control {
-        option {
-          background-color: white;
-          color: $textColor;
-        }
+    .input-group {
+      .form-control {
+        background-color: $secondColor;
+      }
+      .input-group-text {
+        background-color: #4aa1dd;
+        color: white;
+      }
+    }
+    .Select--custom {
+      background: $secondColor url('../images/arrow-select.png') 100% 50% no-repeat;
+      border-radius: .25rem;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      width: 100%;
+      .form-control {
+        appearance: none;
+        background-color: transparent;
       }
     }
     input[type="date"] {

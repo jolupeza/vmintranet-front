@@ -221,7 +221,7 @@ body.boxed-layout .footer-widget {
   position: relative;
   margin: 0;
   border: 0px;
-  padding: 11.5px 28px 11.5px 28px;
+  padding: 11.5px 20px 11.5px 20px;
   text-decoration: none;
   font-size: 14px;
   font-weight: normal;
@@ -233,7 +233,7 @@ body.boxed-layout .footer-widget {
   font-size: 19px;
   position: relative;
   top: 3px;
-  margin-right: 5px;
+  margin-right: 10px;
   text-shadow: none;
 }
 .page-sidebar .page-sidebar-wrapper > ul > li > a > .label.bubble-only {
@@ -276,7 +276,7 @@ body.boxed-layout .footer-widget {
 .page-sidebar .page-sidebar-wrapper > ul > li.active > ul.sub-menu {
   display: block;
 }
-.page-sidebar .page-sidebar-wrapper > ul > li.active > ul.sub-menu > li ul.sub-menu {
+.page-sidebar .page-sidebar-wrapper > ul > li.active > ul.sub-menu > li.active ul.sub-menu {
   display: block;
 }
 .page-sidebar .page-sidebar-wrapper > ul > li > ul.sub-menu {
@@ -314,9 +314,27 @@ body.boxed-layout .footer-widget {
                 background: #1b1e24;
               }
             }
+            > .title {
+              padding: 5px 0 5px 25px;
+            }
             &.active {
-              a {
+              > a {
                 background-color: #1b1e24;
+              }
+            }
+          }
+        }
+        &.active {
+          > ul.sub-menu {
+            > li {
+              > ul.sub-menu {
+                > li {
+                  &.active {
+                    a {
+                      font-weight: 600;
+                    }
+                  }
+                }
               }
             }
           }

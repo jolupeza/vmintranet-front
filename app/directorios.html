@@ -70,19 +70,6 @@
                 </li>
               </ul>
             </li>
-            <!-- <li class="quicklinks"> <span class="h-seperate"></span></li>
-            <li class="quicklinks">
-              <a href="#" class="chat-menu-toggle" data-webarch="toggle-right-side"><i class="material-icons">chat</i><span class="badge badge-important hide">1</span></a>
-              <div class="simple-chat-popup chat-menu-toggle hide">
-                <div class="simple-chat-popup-arrow"></div>
-                <div class="simple-chat-popup-inner">
-                  <div style="width:100px">
-                    <div class="semi-bold">David Nester</div>
-                    <div class="message">Hey you there </div>
-                  </div>
-                </div>
-              </div>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -112,10 +99,10 @@
             <a href="reglamento.html">
               <i class="fas fa-book"></i><span class="title">Reglamento Interno</span></a>
           </li>
-          <li class="start open active">
+          <li>
             <a href="javascript:;"><i class="fas fa-bookmark"></i><span class="title">Circulares</span><span class="arrow"></span></a>
             <ul class="sub-menu">
-              <li class="active"><a href="circulares.html">Prekinder</a></li>
+              <li><a href="circulares.html">Prekinder</a></li>
               <li><a href="circulares.html">Kinder</a></li>
               <li><a href="circulares.html">Primaria</a></li>
             </ul>
@@ -147,11 +134,11 @@
                   <span class="title">Primer Grado</span><span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
-                  <li><a href="apoyo.html">Apoyo a las Alumnas</a></li>
+                  <li class="active"><a href="apoyo.html">Apoyo a las Alumnas</a></li>
                   <li><a href="apoyo.html">Ejercicios Especiales</a></li>
                 </ul>
               </li>
-              <li class="">
+              <li>
                 <a href="javascript:;">
                   <span class="title">Segundo Grado</span><span class="arrow"></span>
                 </a>
@@ -159,6 +146,22 @@
                   <li><a href="apoyo.html">Apoyo a las Alumnas</a></li>
                   <li><a href="apoyo.html">Ejercicios Especiales</a></li>
                 </ul>
+              </li>
+              <li><span class="title">Otros Programas</span></li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">Música</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">Programa 1</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <span class="title">Programa 2</span>
+                </a>
               </li>
             </ul>
           </li>
@@ -178,14 +181,24 @@
               <i class="fas fa-calendar-alt"></i> <span class="title">Calendario</span></a>
           </li>
           <li>
-            <a href="javascript:;"> <i class="material-icons">room_service</i> <span class="title">Menú LB KIDS</span> <span class=" arrow"></span> </a>
+            <a href="javascript:;">
+              <i class="fas fa-concierge-bell"></i><span class="title">Menú LB KIDS</span><span class=" arrow"></span>
+            </a>
             <ul class="sub-menu">
-              <li> <a href="grids_simple.html">Simple Grids</a> </li>
-              <li> <a href="grids_draggable.html">Draggable Grids </a> </li>
+              <li><a href="menu.html">Primer Grado</a></li>
+              <li><a href="menu.html">Segundo Grado</a></li>
+              <li><a href="menu.html">Tercer Grado</a></li>
+              <li><a href="menu.html">Cuarto Grado</a></li>
+              <li><a href="menu.html">Quinto Grado</a></li>
+              <li><a href="menu.html">Sexto Grado</a></li>
+              <li><a href="menu.html">Prekinder</a></li>
+              <li><a href="menu.html">Kinder</a></li>
             </ul>
           </li>
-          <li>
-            <a href="directorios.html"><i class="fas fa-address-book"></i> <span class="title">Directorio</span> </a>
+          <li class="active">
+            <a href="directorios.html">
+              <i class="fas fa-address-book"></i> <span class="title">Directorio</span>
+            </a>
           </li>
         </ul>
         <div class="clearfix"></div>
@@ -195,168 +208,105 @@
       <div class="content">
         <ul class="breadcrumb">
           <li><a href="#">Inicio</a></li>
-          <li>Circulares</li>
-          <li class="active">Prekinder</li>
+          <li class="active">Directorio</li>
         </ul>
         <div class="page-title">
-          <h3><i class="far fa-arrow-alt-circle-left"></i><span class="semi-bold">Circulares</span></h3>
+          <h3>
+            <i class="far fa-arrow-alt-circle-left"></i><span class="semi-bold">Directorio</span>
+          </h3>
         </div>
         <aside class="Filters">
-          <form action="" class="Form Form--filters">
-            <div class="row">
-              <div class="col-md-2">
-                <div class="input-group">
-                  <input type="date" class="form-control" id="fromdate" name="fromdate" />
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="input-group">
-                  <input type="date" class="form-control" id="todate" name="todate" />
-                  <div class="input-group-append">
-                    <span class="input-group-text"><i class="fa fa-calendar-alt"></i></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="Select--custom">
-                  <select class="form-control" id="orderby" name="orderby">
-                    <option value="">Ordenar por</option>
-                    <option value="1">Más recientes</option>
-                    <option value="2">Más antiguas</option>
-                    <option value="3">Nombre</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-md-2">
-                <button type="button" class="btn btn-primary btn-cons text-uppercase">Filtrar</button>
-              </div>
-            </div>
-          </form>
+          <a href="#" class="d-inline-block btn btn-success btn-large mr-4">Directivo</a>
+          <a href="#" class="d-inline-block btn btn-link mr-4">Administrativo</a>
+          <a href="#" class="d-inline-block btn btn-link mr-4">Académico</a>
         </aside>
         <div class="row">
           <div class="col-md-12">
             <div class="grid simple ">
-              <div class="grid-title no-border">
-                <div class="tools">
-                  <a href="javascript:;" class="collapse"></a>
-                  <a href="#grid-config" data-toggle="modal" class="config"></a>
-                  <a href="javascript:;" class="reload"></a>
-                  <a href="javascript:;" class="remove"></a>
-                </div>
-              </div>
-              <div class="grid-body no-border">
-                <table class="table no-more-tables">
+              <div class="grid-body">
+                <table class="table table-borderless table-hover Table">
                   <thead>
                     <tr>
-                      <th style="width:9%">Fecha</th>
-                      <th style="width:22%">Nombre del Archivo</th>
-                      <th style="width:6%">Tamaño</th>
-                      <th style="width:10%">Descargar</th>
+                      <th style="width:22%">Nombre</th>
+                      <th style="width:22%">Correo electrónico</th>
+                      <th style="width:10%">Teléfono</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
                       <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
+                        <article class="Table__card">
+                          <figure class="Table__card__figure">
+                            <img src="images/profiles/avatar.jpg" alt="Avatar" class="img-fluid rounded-circle">
+                          </figure>
+                          <div class="Table__card__info">
+                            <h3 class="Table__card__info__title">María Teresa Arrarte Arisnabarreta</h3>
+                            <p class="Table__card__info__text">Secretaria de Dirección</p>
+                          </div>
+                        </article>
                       </td>
+                      <td class="v-align-middle">directora@vmm.pe</td>
+                      <td class="v-align-middle">999 999 999</td>
                     </tr>
                     <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
                       <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
+                        <article class="Table__card">
+                          <figure class="Table__card__figure">
+                            <img src="images/profiles/avatar.jpg" alt="Avatar" class="img-fluid rounded-circle">
+                          </figure>
+                          <div class="Table__card__info">
+                            <h3 class="Table__card__info__title">María Teresa Arrarte Arisnabarreta</h3>
+                            <p class="Table__card__info__text">Secretaria de Dirección</p>
+                          </div>
+                        </article>
                       </td>
+                      <td class="v-align-middle">directora@vmm.pe</td>
+                      <td class="v-align-middle">999 999 999</td>
                     </tr>
                     <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
                       <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
+                        <article class="Table__card">
+                          <figure class="Table__card__figure">
+                            <img src="images/profiles/avatar.jpg" alt="Avatar" class="img-fluid rounded-circle">
+                          </figure>
+                          <div class="Table__card__info">
+                            <h3 class="Table__card__info__title">María Teresa Arrarte Arisnabarreta</h3>
+                            <p class="Table__card__info__text">Secretaria de Dirección</p>
+                          </div>
+                        </article>
                       </td>
+                      <td class="v-align-middle">directora@vmm.pe</td>
+                      <td class="v-align-middle">999 999 999</td>
                     </tr>
                     <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
                       <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
+                        <article class="Table__card">
+                          <figure class="Table__card__figure">
+                            <img src="images/profiles/avatar.jpg" alt="Avatar" class="img-fluid rounded-circle">
+                          </figure>
+                          <div class="Table__card__info">
+                            <h3 class="Table__card__info__title">María Teresa Arrarte Arisnabarreta</h3>
+                            <p class="Table__card__info__text">Secretaria de Dirección</p>
+                          </div>
+                        </article>
                       </td>
+                      <td class="v-align-middle">directora@vmm.pe</td>
+                      <td class="v-align-middle">999 999 999</td>
                     </tr>
                     <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
                       <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
+                        <article class="Table__card">
+                          <figure class="Table__card__figure">
+                            <img src="images/profiles/avatar.jpg" alt="Avatar" class="img-fluid rounded-circle">
+                          </figure>
+                          <div class="Table__card__info">
+                            <h3 class="Table__card__info__title">María Teresa Arrarte Arisnabarreta</h3>
+                            <p class="Table__card__info__text">Secretaria de Dirección</p>
+                          </div>
+                        </article>
                       </td>
-                    </tr>
-                    <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
-                      <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
-                      <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
-                      <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
-                      <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="v-align-middle">20 Ago</td>
-                      <td class="v-align-middle"><span class="muted">WebArch responsive dashboard</span>
-                      </td>
-                      <td><span class="muted">615 kb</span>
-                      </td>
-                      <td class="v-align-middle">
-                        <a href="#">Descargar <i class="fas fa-download"></i></a>
-                      </td>
+                      <td class="v-align-middle">directora@vmm.pe</td>
+                      <td class="v-align-middle">999 999 999</td>
                     </tr>
                   </tbody>
                 </table>

@@ -15726,7 +15726,7 @@ span.iconset {
   display: table-cell; }
 
 .v-align-middle {
-  vertical-align: middle;
+  vertical-align: middle !important;
   display: table-cell; }
 
 .h-align-middle {
@@ -23341,5 +23341,89 @@ body.rtl .footer-widget {
 .Form__rotate {
   font-size: 1.5em;
   vertical-align: middle; }
+
+.Table__card {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.Table__card__figure {
+  margin: 0 1.5rem 0 0;
+  max-width: 65px; }
+
+.Table__card__info {
+  -ms-flex-line-pack: center;
+  align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.Table__card__info__title {
+  color: #252627;
+  font-size: .875rem;
+  font-weight: 700;
+  margin: 0;
+  width: 100%; }
+
+.Table__card__info__text {
+  margin: 0;
+  width: 100%; }
+
+.Cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .Cards--25 {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .Cards--25 .Cards__item {
+      width: 23%; }
+
+.Cards__item {
+  margin-bottom: 1.5rem; }
+
+.Cards__figure {
+  margin-bottom: 0; }
+  .Cards__figure img {
+    border-radius: .8rem .8rem 0 0; }
+
+.Cards__info {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #348fce;
+  border-radius: 0 0 .8rem .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem; }
+
+.Cards__info__date {
+  color: white;
+  font-size: .875rem;
+  font-weight: 700;
+  margin: 0; }
+
+.Cards__info__link {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .75rem;
+  font-weight: 300; }
 
 /*# sourceMappingURL=maps/style.css.map */

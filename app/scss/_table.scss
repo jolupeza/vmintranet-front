@@ -1,0 +1,27 @@
+.Table {
+
+}
+.Table__card {
+  align-items: center;
+  display: flex;
+}
+.Table__card__figure {
+  margin: 0 1.5rem 0 0;
+  max-width: 65px;
+}
+.Table__card__info {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Table__card__info__title {
+  color: #252627;
+  font-size: .875rem;
+  font-weight: 700;
+  margin: 0;
+  width: 100%;
+}
+.Table__card__info__text {
+  margin: 0;
+  width: 100%;
+}

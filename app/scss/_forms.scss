@@ -8,6 +8,9 @@
       font-family: $openSans;
       font-size: 1rem;
       font-weight: 600;
+      &::placeholder {
+        color: white;
+      }
     }
     .input-group {
       .form-control {
@@ -28,6 +31,9 @@
       .form-control {
         appearance: none;
         background-color: transparent;
+      }
+      option {
+        background-color: $secondColor;
       }
     }
     input[type="date"] {

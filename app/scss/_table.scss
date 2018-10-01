@@ -1,5 +1,11 @@
 .Table {
-
+  tbody {
+    tr {
+      @media screen and (max-width: 767px) {
+        border-bottom: 3px solid #999;
+      }
+    }
+  }
 }
 .Table__card {
   align-items: center;

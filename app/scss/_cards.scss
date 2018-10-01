@@ -5,6 +5,15 @@
     justify-content: space-between;
     .Cards__item {
       width: 23%;
+      @media screen and (max-width: 991px) {
+        width: 32%;
+      }
+      @media screen and (max-width: 767px) {
+        width: 48%;
+      }
+      @media screen and (max-width: 575px) {
+        width: 100%;
+      }
     }
   }
 }

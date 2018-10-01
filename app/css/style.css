@@ -23619,4 +23619,33 @@ body.rtl .footer-widget {
   font-size: .75rem;
   font-weight: 300; }
 
+.Calendar {
+  color: #2c3e50;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .Calendar .theme-default .cv-day.today {
+    background-color: #F8F4E0; }
+    .Calendar .theme-default .cv-day.today .cv-day-number {
+      border-radius: 50%;
+      background-color: #FF515D;
+      color: black;
+      font-weight: 700;
+      padding: .5em;
+      right: 5px;
+      top: 5px; }
+  .Calendar .theme-default .cv-event {
+    background-color: #FF515D;
+    color: white;
+    font-size: .875em;
+    margin-top: 1.5em;
+    padding: .5em; }
+  .Calendar .theme-default.period-week .cv-week {
+    min-height: 15em; }
+  .Calendar .cv-week {
+    min-height: 8em; }
+
+.Calendar__buttons .btn-primary:not(:disabled):not(.disabled).active {
+  background-color: #099a8c; }
+
 /*# sourceMappingURL=maps/style.css.map */

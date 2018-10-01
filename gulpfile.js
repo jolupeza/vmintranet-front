@@ -58,7 +58,7 @@ gulp.task('css', () => {
 
 gulp.task('concat', () => {
   return gulp.src([
-    //config.jsDir + '/main.js',
+    config.jsDir + '/main.js',
     config.jsDir + '/webarch.js',
     //config.jsDir + '/start.js',
     //config.jsDir + '/carousel.js',

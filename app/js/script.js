@@ -1,5 +1,40 @@
 "use strict";
 
+/*******************************************************
+function verifyMedia () {
+  if (window.matchMedia("(max-width: 991px)").matches) {
+
+  } else {
+    console.log('Mi viewport es mayor o igual a 992px');
+  }
+}
+/*******************************************************/
+
+;(function ($) {
+  var $window = $(window);
+
+  $(function () {
+    $window.on('scroll', function () {
+      // checkScroll();
+    });
+
+    setBgDashboard();
+
+    //$window.on('resize',  function () {
+    //  verifyMedia();
+    //});
+  });
+
+  var setBgDashboard = function setBgDashboard() {
+    var imageParent = $('.Dashboard__figure'),
+        imageTag = imageParent.find('img'),
+        image = imageTag.attr('src');
+
+    imageParent.css('background-image', 'url("' + image + '")');
+  };
+})(jQuery);
+"use strict";
+
 (function ($) {
 
     'use strict';

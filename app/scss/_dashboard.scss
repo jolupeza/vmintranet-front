@@ -1,9 +1,18 @@
 .Dashboard {
-
+  display: flex;
+  min-height: 100vh;
 }
 .Dashboard__figure {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 0;
+  min-height: 100%;
   position: relative;
+  width: 100%;
+  img {
+    display: none;
+  }
 }
 .Dashboard__info {
   align-content: center;
@@ -16,6 +25,9 @@
   position: absolute;
   top: 0;
   width: 50%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 .Dashboard__info__title, .Dashboard__info__text {
   width: 100%;

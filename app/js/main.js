@@ -15,49 +15,22 @@ function verifyMedia () {
 
   $(function () {
     $window.on('scroll', () => {
-      checkScroll();
+      // checkScroll();
     });
 
-    checkScroll();
-
-    $('.ArrowTop').on('click', (ev) => {
-      ev.preventDefault();
-
-      $('html, body').animate({scrollTop: 0}, 800);
-    });
-
-    /*
-    $('.element-animate').hover(
-      function () {
-        var $this = $(this),
-            animation = $this.data('animation'),
-            parent = $this.parent();
-
-        parent.addClass('animated ' + animation);
-      },
-      function () {
-        var $this = $(this),
-            animation = $this.data('animation'),
-            parent = $this.parent();
-
-        parent.removeClass('animated ' + animation);
-      }
-    );
-    */
+    setBgDashboard();
 
     //$window.on('resize',  function () {
     //  verifyMedia();
     //});
   });
 
-  let checkScroll = () => {
-    let arrow = $('.ArrowTop');
+  let setBgDashboard = () => {
+    let imageParent = $('.Dashboard__figure'),
+        imageTag = imageParent.find('img'),
+        image = imageTag.attr('src');
 
-    if ( $window.scrollTop() > 150 ) {
-      arrow.fadeIn();
-    } else {
-      arrow.fadeOut();
-    }
-  };
+    imageParent.css('background-image', `url("${image}")`);
+  }
 })(jQuery);
 

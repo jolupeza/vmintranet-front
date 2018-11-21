@@ -20,6 +20,8 @@ function verifyMedia () {
 
     setBgDashboard();
 
+    $('.page-content, .page-sidebar').bind('touchmove', false);
+
     //$window.on('resize',  function () {
     //  verifyMedia();
     //});

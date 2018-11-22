@@ -20,11 +20,20 @@ function verifyMedia () {
 
     setBgDashboard();
 
-    $('.page-content, .page-sidebar').on('touchmove', false);
+    var enabledSidebar = window.matchMedia("(min-width: 1300px)").matches ? true : false;
+    setWidthContent(enabledSidebar);
+    setWidthSidebar();
 
-    //$window.on('resize',  function () {
-    //  verifyMedia();
-    //});
+    setDisplaySidebar();
+
+    toggleSidebar();
+
+    $window.on('resize', function () {
+      var enabledSidebar = window.matchMedia("(min-width: 1300px)").matches ? true : false;
+
+      setWidthContent(enabledSidebar);
+      setDisplaySidebar();
+    });
   });
 
   var setBgDashboard = function setBgDashboard() {
@@ -32,7 +41,54 @@ function verifyMedia () {
         imageTag = imageParent.find('img'),
         image = imageTag.attr('src');
 
-    imageParent.css('background-image', 'url("' + image + '")');
+    imageParent.css('background-image', "url(\"" + image + "\")");
+  };
+
+  var wViewport = function wViewport() {
+    return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  };
+
+  var setWidthContent = function setWidthContent(enableSidebar) {
+    var widthSidebar = enableSidebar ? document.querySelector('.page-sidebar').clientWidth : 0,
+        widthContent = wViewport() - widthSidebar;
+
+    document.documentElement.style.setProperty('--width-content', widthContent + "px");
+  };
+
+  var setWidthSidebar = function setWidthSidebar() {
+    var widthSidebar = document.querySelector('.page-sidebar').clientWidth;
+
+    document.documentElement.style.setProperty('--width-sidebar', widthSidebar + "px");
+  };
+
+  var setDisplaySidebar = function setDisplaySidebar() {
+    var pageSidebar = document.querySelector('.page-sidebar'),
+        header = document.querySelector('.header');
+
+    if (window.matchMedia("(min-width: 1300px)").matches) {
+      pageSidebar.classList.add('active');
+      header.classList.add('active');
+    } else {
+      pageSidebar.classList.remove('active');
+      header.classList.remove('active');
+    }
+  };
+
+  var toggleSidebar = function toggleSidebar() {
+    var button = document.querySelector('.Header__toggle'),
+        pageSidebar = document.querySelector('.page-sidebar'),
+        pageContent = document.querySelector('.page-content'),
+        header = document.querySelector('.header');
+
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var enabledSidebar = pageSidebar.classList.contains('active') ? false : true;
+
+      pageSidebar.classList.toggle('active');
+      header.classList.toggle('active');
+      setWidthContent(enabledSidebar);
+    });
   };
 })(jQuery);
 "use strict";
@@ -454,7 +510,7 @@ function verifyMedia () {
     Webarch.prototype.init = function () {
         // init layout
         this.initSideBar();
-        this.initSideBarToggle();
+        // this.initSideBarToggle();
         this.initHorizontalMenu();
         this.initPortletTools();
         this.initScrollUp();
@@ -510,15 +566,14 @@ $(document).ready(function () {
 
 
     //***********************************BEGIN Main Menu Toggle *****************************
-    $('#layout-condensed-toggle').click(function () {
-        var header = $('.header');
-
-        if ($('#main-menu').attr('data-inner-menu') == '1') {
+    /*$('#layout-condensed-toggle').click(function () {
+      let header = $('.header');
+         if ($('#main-menu').attr('data-inner-menu') == '1') {
             //Do nothing
             console.log("Menu is already condensed");
         } else {
             if ($('#main-menu').hasClass('mini')) {
-                header.removeClass('mini');
+              header.removeClass('mini');
                 $('body').removeClass('grey');
                 $('body').removeClass('condense-menu');
                 $('#main-menu').removeClass('mini');
@@ -529,7 +584,7 @@ $(document).ready(function () {
                 $('.header-seperation').css('height', '61px');
                 $('.footer-widget').show();
             } else {
-                header.addClass('mini');
+              header.addClass('mini');
                 $('body').addClass('grey');
                 $('#main-menu').addClass('mini');
                 $('.page-content').addClass('condensed');
@@ -539,7 +594,7 @@ $(document).ready(function () {
                 // $('.main-menu-wrapper').scrollbar('destroy');
             }
         }
-    });
+    });*/
 
     if ($.fn.sparkline) {
         $('.sparklines').sparkline('html', {

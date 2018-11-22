@@ -427,7 +427,7 @@
     Webarch.prototype.init = function() {
         // init layout
         this.initSideBar();
-        this.initSideBarToggle();
+        // this.initSideBarToggle();
         this.initHorizontalMenu();
         this.initPortletTools();
         this.initScrollUp();
@@ -487,7 +487,7 @@ $(document).ready(function () {
 
 
     //***********************************BEGIN Main Menu Toggle *****************************
-    $('#layout-condensed-toggle').click(function () {
+    /*$('#layout-condensed-toggle').click(function () {
       let header = $('.header');
 
         if ($('#main-menu').attr('data-inner-menu') == '1') {
@@ -516,7 +516,7 @@ $(document).ready(function () {
                 // $('.main-menu-wrapper').scrollbar('destroy');
             }
         }
-    });
+    });*/
 
     if ($.fn.sparkline) {
         $('.sparklines').sparkline('html', {
